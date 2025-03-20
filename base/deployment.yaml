@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cats-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cats
+  template:
+    metadata:
+      labels:
+        app: cats
+    spec:
+      containers:
+      - name: cats
+        image: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/cats
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dogs-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dogs
+  template:
+    metadata:
+      labels:
+        app: dogs
+    spec:
+      containers:
+      - name: dogs
+        image: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/dogs
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/web
+        ports:
+        - containerPort: 80
