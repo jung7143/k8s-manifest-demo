@@ -2,13 +2,13 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - deployment.yaml
-  - service.yaml
+- deployment.yaml
+- service.yaml
 
 images:
-  - name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/cats
-    newTag: latest
-  - name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/dogs
-    newTag: latest
-  - name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/web
-    newTag: latest
+- name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/cats
+  newName: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/cats
+- name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/dogs
+  newName: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/dogs
+- name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/web
+  newName: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/web
