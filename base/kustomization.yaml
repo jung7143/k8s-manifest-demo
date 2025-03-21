@@ -7,8 +7,8 @@ resources:
 
 images:
   - name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/cats
-    newTag: latest
+    newTag: abcdefg
   - name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/dogs
-    newTag: latest
+    newTag: abcdefg
   - name: 058264243522.dkr.ecr.ap-northeast-2.amazonaws.com/web
-    newTag: latest
+    newTag: abcdefg
